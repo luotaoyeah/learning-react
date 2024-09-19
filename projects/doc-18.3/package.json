@@ -4,7 +4,8 @@
     "version": "0.0.0",
     "main": "/src/index.js",
     "scripts": {
-        "start": "set ENTRY=index && node scripts/start.js",
+        "start": "set ENTRY=index&& node scripts/start.js",
+        "start:your-first-component": "set ENTRY=your-first-component/index&& node scripts/start.js",
         "build": "node scripts/build.js"
     },
     "dependencies": {

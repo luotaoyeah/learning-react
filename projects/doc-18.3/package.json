@@ -6,6 +6,7 @@
     "scripts": {
         "start": "set ENTRY=index&& node scripts/start.js",
         "start:your-first-component": "set ENTRY=your-first-component/index&& node scripts/start.js",
+        "start:writing-markup-with-jsx": "set ENTRY=writing-markup-with-jsx/index&& node scripts/start.js",
         "build": "node scripts/build.js"
     },
     "dependencies": {

@@ -99,7 +99,7 @@ checkBrowsers(paths.appPath, isInteractive)
                 console.log(chalk.yellow(`Fast Refresh requires React 16.10 or higher. You are using React ${react.version}.`));
             }
 
-            console.log(chalk.cyan("Starting the development server...\n"));
+            console.log(chalk.cyan("STARTING THE DEVELOPMENT SERVER...\n"));
             openBrowser(urls.localUrlForBrowser);
         });
 

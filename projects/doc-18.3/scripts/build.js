@@ -69,12 +69,12 @@ checkBrowsers(paths.appPath, isInteractive)
     .then(
         ({ stats, previousFileSizes, warnings }) => {
             if (warnings.length) {
-                console.log(chalk.yellow("Compiled with warnings.\n"));
+                console.log(chalk.yellow("COMPILED WITH WARNINGS.\n"));
                 console.log(warnings.join("\n\n"));
                 console.log("\nSearch for the " + chalk.underline(chalk.yellow("keywords")) + " to learn more about each warning.");
                 console.log("To ignore, add " + chalk.cyan("// eslint-disable-next-line") + " to the line before.\n");
             } else {
-                console.log(chalk.green("Compiled successfully.\n"));
+                console.log(chalk.green("COMPILED SUCCESSFULLY.\n"));
             }
 
             console.log("File sizes after gzip:\n");
@@ -93,7 +93,7 @@ checkBrowsers(paths.appPath, isInteractive)
                 console.log(chalk.yellow("Compiled with the following type errors (you may want to check these before deploying your app):\n"));
                 printBuildError(err);
             } else {
-                console.log(chalk.red("Failed to compile.\n"));
+                console.log(chalk.red("FAILED TO COMPILE.\n"));
                 printBuildError(err);
                 process.exit(1);
             }

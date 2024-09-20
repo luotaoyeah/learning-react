@@ -10,7 +10,7 @@
         "start:javascript-in-jsx-with-curly-braces": "set ENTRY=javascript-in-jsx-with-curly-braces/index&& node scripts/start.js",
         "start:passing-props-to-a-component": "set ENTRY=passing-props-to-a-component/index&& node scripts/start.js",
         "start:rendering-lists": "set ENTRY=rendering-lists/index&& node scripts/start.js",
-        "start:keeping-components-pure": "set ENTRY=keeping-components-pure/index&& node scripts/start.js",
+        "start:state-a-components-memory": "set ENTRY=state-a-components-memory/index&& node scripts/start.js",
         "build": "node scripts/build.js"
     },
     "dependencies": {

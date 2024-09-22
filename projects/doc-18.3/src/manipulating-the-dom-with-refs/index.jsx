@@ -1,4 +1,4 @@
-import React, { StrictMode, useRef } from "react";
+import React, { forwardRef, StrictMode, useImperativeHandle, useRef } from "react";
 import { createRoot } from "react-dom/client";
 import "../index.css";
 
@@ -42,8 +42,76 @@ function A() {
     );
 }
 
+const C = forwardRef((props, ref) => (
+    <fieldset>
+        <legend>C</legend>
+
+        <div>
+            <input ref={ref} type="text" />
+        </div>
+    </fieldset>
+));
+
+const D = forwardRef((props, ref) => {
+    const myRef = useRef(null);
+
+    useImperativeHandle(ref, () => {
+        return {
+            focus: () => {
+                myRef.current.focus();
+            },
+        };
+    });
+
+    return (
+        <fieldset>
+            <legend>D</legend>
+
+            <div>
+                <input ref={myRef} type="text" />
+            </div>
+        </fieldset>
+    );
+});
+
+function B() {
+    const inputRef01 = useRef(null);
+    const inputRef02 = useRef(null);
+
+    return (
+        <fieldset>
+            <legend>B</legend>
+
+            <div>
+                <C ref={inputRef01}></C>
+
+                <D ref={inputRef02}></D>
+            </div>
+
+            <div>
+                <button
+                    onClick={() => {
+                        inputRef01.current.focus();
+                    }}
+                >
+                    FOCUS C
+                </button>
+
+                <button
+                    onClick={() => {
+                        inputRef02.current.focus();
+                    }}
+                >
+                    FOCUS D
+                </button>
+            </div>
+        </fieldset>
+    );
+}
+
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <A />
+        <B />
     </StrictMode>,
 );

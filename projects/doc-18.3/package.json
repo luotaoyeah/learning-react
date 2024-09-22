@@ -13,6 +13,7 @@
         "start:state-a-components-memory": "set ENTRY=state-a-components-memory/index&& node scripts/start.js",
         "start:extracting-state-logic-into-a-reducer": "set ENTRY=extracting-state-logic-into-a-reducer/index&& node scripts/start.js",
         "start:passing-data-deeply-with-context": "set ENTRY=passing-data-deeply-with-context/index&& node scripts/start.js",
+        "start:scaling-up-with-reducer-and-context": "set ENTRY=scaling-up-with-reducer-and-context/index&& node scripts/start.js",
         "build": "node scripts/build.js"
     },
     "dependencies": {

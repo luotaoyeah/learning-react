@@ -11,6 +11,7 @@
         "start:passing-props-to-a-component": "set ENTRY=passing-props-to-a-component/index&& node scripts/start.js",
         "start:rendering-lists": "set ENTRY=rendering-lists/index&& node scripts/start.js",
         "start:state-a-components-memory": "set ENTRY=state-a-components-memory/index&& node scripts/start.js",
+        "start:extracting-state-logic-into-a-reducer": "set ENTRY=extracting-state-logic-into-a-reducer/index&& node scripts/start.js",
         "build": "node scripts/build.js"
     },
     "dependencies": {
@@ -65,7 +66,9 @@
         "webpack-manifest-plugin": "^4.0.2",
         "workbox-webpack-plugin": "^6.4.1"
     },
-    "devDependencies": {},
+    "devDependencies": {
+        "@types/react": "^18.0.38"
+    },
     "jest": {
         "roots": [
             "<rootDir>/src"

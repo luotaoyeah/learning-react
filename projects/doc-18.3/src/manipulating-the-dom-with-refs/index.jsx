@@ -42,20 +42,25 @@ function A() {
     );
 }
 
-const C = forwardRef((props, ref) => (
-    <fieldset>
-        <legend>C</legend>
+const C = forwardRef((props, ref) => {
+    // 在 forwardRef() 组件中, 组件可以直接将传进来的 ref 赋值给里面某个 HTML 标签, 从而让父组件获取对该 HTML 标签的引用,
+    return (
+        <fieldset>
+            <legend>C</legend>
 
-        <div>
-            <input ref={ref} type="text" />
-        </div>
-    </fieldset>
-));
+            <div>
+                <input ref={ref} type="text" />
+            </div>
+        </fieldset>
+    );
+});
 
 const D = forwardRef((props, ref) => {
     const myRef = useRef(null);
 
+    // 在 forwardRef() 组件中, 组件也可以使用 useImperativeHandle() 方法来限制父组件通过 ref 可以获取到的实际数据,
     useImperativeHandle(ref, () => {
+        // 父组件通过 ref 获取到的是下面返回的这个对象,
         return {
             focus: () => {
                 myRef.current.focus();
@@ -77,6 +82,8 @@ const D = forwardRef((props, ref) => {
 function B() {
     const inputRef01 = useRef(null);
     const inputRef02 = useRef(null);
+
+    // ref 用在 HTML 标签上可以直接获取到 DOM 元素的引用, 但是 ref 用在组件上默认获取到的是 null, 除非组件通过 forwardRef() 来明确支持 ref 的使用,
 
     return (
         <fieldset>

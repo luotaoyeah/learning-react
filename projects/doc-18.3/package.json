@@ -15,6 +15,7 @@
         "start:passing-data-deeply-with-context": "set ENTRY=passing-data-deeply-with-context/index&& node scripts/start.js",
         "start:scaling-up-with-reducer-and-context": "set ENTRY=scaling-up-with-reducer-and-context/index&& node scripts/start.js",
         "start:referencing-values-with-refs": "set ENTRY=referencing-values-with-refs/index&& node scripts/start.js",
+        "start:manipulating-the-dom-with-refs": "set ENTRY=manipulating-the-dom-with-refs/index&& node scripts/start.js",
         "build": "node scripts/build.js"
     },
     "dependencies": {

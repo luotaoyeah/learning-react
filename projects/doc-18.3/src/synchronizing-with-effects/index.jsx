@@ -32,9 +32,9 @@ function B() {
     const [text, setText] = useState("");
     const videoRef = useRef(null);
 
-    // 当没有指定 dependencies 时, 每次 render 之后都会触发,
+    // 当没有指定 dependencies 时, 每次 render 之后都会执行,
     // 当 dependencies 为 [] 时, 只会在首次 mount 之后执行一次,
-    // 当 dependencies 不为空时, 当里面任意一个 dependency 发生变更时, 就会执行,
+    // 当 dependencies 不为空时, 当里面任意一个 dependency 发生变更时, 才会执行,
     //   通过 Object.is() 来判断是否发生了变更,
     useEffect(() => {
         console.log("B | useEffect()");
@@ -76,7 +76,7 @@ function C() {
     useEffect(() => {
         console.log("C | useEffect()");
 
-        // useEffect() 中返回一个函数, 这个函数称为该 effect 的 destructor,
+        // useEffect() 中返回一个函数, 这个函数称为 destructor,
         // destructor 的返回值必须为 void,
         // destructor 会在下次执行 effect 之前执行, 并且会在组件 unmount 时执行一次,
         return () => {

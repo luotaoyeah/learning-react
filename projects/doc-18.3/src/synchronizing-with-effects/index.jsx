@@ -69,9 +69,34 @@ function B() {
     );
 }
 
+function C() {
+    // 在开发环境, 组件会 mount 两次,
+    console.log("C()");
+
+    useEffect(() => {
+        console.log("C | useEffect()");
+
+        // useEffect() 中返回一个函数, 这个函数称为该 effect 的 destructor,
+        // destructor 的返回值必须为 void,
+        // destructor 会在下次执行 effect 之前执行, 并且会在组件 unmount 时执行一次,
+        return () => {
+            console.log("C | useEffect() | destroy");
+        };
+    }, []);
+
+    return (
+        <fieldset>
+            <legend>C</legend>
+
+            <div></div>
+        </fieldset>
+    );
+}
+
 createRoot(document.getElementById("root")).render(
     <StrictMode>
         <A />
         <B />
+        <C />
     </StrictMode>,
 );

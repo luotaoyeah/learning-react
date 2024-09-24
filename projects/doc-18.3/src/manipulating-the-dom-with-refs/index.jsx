@@ -58,7 +58,7 @@ const C = forwardRef((props, ref) => {
 const D = forwardRef((props, ref) => {
     const myRef = useRef(null);
 
-    // 在 forwardRef() 组件中, 组件也可以使用 useImperativeHandle() 方法来限制父组件通过 ref 可以获取到的实际数据,
+    // 在 forwardRef() 组件中, 也可以使用 useImperativeHandle() 方法来限制父组件通过 ref 可以获取到的实际数据,
     useImperativeHandle(ref, () => {
         // 父组件通过 ref 获取到的是下面返回的这个对象,
         return {

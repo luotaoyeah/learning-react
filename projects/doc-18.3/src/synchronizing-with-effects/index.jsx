@@ -33,6 +33,9 @@ function B() {
     const videoRef = useRef(null);
 
     // 当没有指定 dependencies 时, 每次 render 之后都会触发,
+    // 当 dependencies 为 [] 时, 只会在首次 mount 之后执行一次,
+    // 当 dependencies 不为空时, 当里面任意一个 dependency 发生变更时, 就会执行,
+    //   通过 Object.is() 来判断是否发生了变更,
     useEffect(() => {
         console.log("B | useEffect()");
         if (isPlay) {
@@ -40,7 +43,7 @@ function B() {
         } else {
             videoRef.current.pause();
         }
-    });
+    }, [isPlay]);
 
     return (
         <fieldset>

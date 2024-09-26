@@ -5,6 +5,7 @@
     "main": "/src/index.js",
     "scripts": {
         "start": "set ENTRY=index&& node scripts/start.js",
+        "start:learn": "set ENTRY=learn/index&& node scripts/start.js",
         "start:your-first-component": "set ENTRY=your-first-component/index&& node scripts/start.js",
         "start:writing-markup-with-jsx": "set ENTRY=writing-markup-with-jsx/index&& node scripts/start.js",
         "start:javascript-in-jsx-with-curly-braces": "set ENTRY=javascript-in-jsx-with-curly-braces/index&& node scripts/start.js",

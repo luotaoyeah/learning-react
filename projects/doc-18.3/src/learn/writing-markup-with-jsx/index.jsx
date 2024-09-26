@@ -1,6 +1,6 @@
 import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "../index.css";
+import "../../index.css";
 
 function A() {
     // 返回的 JSX 中不能包含多个根节点, 如果有多个节点, 需要用一个根节点把他们包裹起来,

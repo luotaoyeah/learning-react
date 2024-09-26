@@ -1,6 +1,6 @@
 import React, { StrictMode, useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
-import "../index.css";
+import "../../index.css";
 
 function A() {
     const [count, setCount] = useState(0);

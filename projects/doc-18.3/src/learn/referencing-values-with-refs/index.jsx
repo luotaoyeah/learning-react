@@ -1,6 +1,6 @@
 import React, { StrictMode, useRef } from "react";
 import { createRoot } from "react-dom/client";
-import "../index.css";
+import "../../index.css";
 
 function A() {
     // 使用 useRef() 声明一个 ref,

@@ -1,6 +1,6 @@
 import React, { Fragment, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "../index.css";
+import "../../index.css";
 
 function A() {
     // <></> 是 <Fragment></Fragment> 的语法糖,

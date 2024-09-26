@@ -1,6 +1,6 @@
 import React, { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "../index.css";
+import "../../index.css";
 
 // JSX 中可以通过花括号{}嵌入JS表达式
 function A() {

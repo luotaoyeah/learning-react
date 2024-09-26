@@ -14,7 +14,7 @@ function B01({ children }) {
 // https://react.dev/reference/react/Suspense#revealing-content-together-at-once
 export function B() {
     return (
-        <fieldset style={{ border: "1px solid blue" }}>
+        <fieldset style={{ borderColor: "blue" }}>
             <legend>B</legend>
 
             <div>// Suspense 下面只要有一个正在加载的组件, 即使它嵌套的很深, 则该 Suspnese 也会显示 fallback 内容, 直到所有的子孙组件都加载完成,</div>

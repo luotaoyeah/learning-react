@@ -4,7 +4,7 @@ import { X1 } from "./00";
 // https://react.dev/reference/react/Suspense#displaying-a-fallback-while-content-is-loading
 export function A() {
     return (
-        <fieldset style={{ border: "1px solid red" }}>
+        <fieldset style={{ borderColor: "red" }}>
             <legend>A</legend>
 
             <Suspense

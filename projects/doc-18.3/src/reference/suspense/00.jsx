@@ -1,5 +1,7 @@
 import { lazy } from "react";
 
+// 使用 lazy() 模拟组件的延迟加载,
+
 export const X1 = lazy(
     () =>
         new Promise((resolve) =>

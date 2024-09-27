@@ -20,6 +20,7 @@
         "start:learn:synchronizing-with-effects": "set ENTRY=learn/synchronizing-with-effects/index&& node scripts/start.js",
         "start:reference:Suspense": "set ENTRY=reference/Suspense/index&& node scripts/start.js",
         "start:reference:useTransition": "set ENTRY=reference/useTransition/index&& node scripts/start.js",
+        "start:reference:useDeferredValue": "set ENTRY=reference/useDeferredValue/index&& node scripts/start.js",
         "build": "node scripts/build.js"
     },
     "dependencies": {

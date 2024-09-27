@@ -5,7 +5,6 @@ import { useState, useTransition } from "react";
  */
 function B01() {
     const now = performance.now();
-
     while (performance.now() - now < 1) {}
 
     return <div>B</div>;
@@ -67,7 +66,7 @@ export default function () {
                             })
                         }
                     >
-                        B
+                        {isPending ? "LOADING" : "B"}
                     </TabButton>
                     <TabButton isActive={tab === "C"} onClick={() => setTab("C")}>
                         C

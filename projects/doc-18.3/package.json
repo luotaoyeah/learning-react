@@ -18,7 +18,8 @@
         "start:learn:referencing-values-with-refs": "set ENTRY=learn/referencing-values-with-refs/index&& node scripts/start.js",
         "start:learn:manipulating-the-dom-with-refs": "set ENTRY=learn/manipulating-the-dom-with-refs/index&& node scripts/start.js",
         "start:learn:synchronizing-with-effects": "set ENTRY=learn/synchronizing-with-effects/index&& node scripts/start.js",
-        "start:reference:suspense": "set ENTRY=reference/suspense/index&& node scripts/start.js",
+        "start:reference:Suspense": "set ENTRY=reference/Suspense/index&& node scripts/start.js",
+        "start:reference:useTransition": "set ENTRY=reference/useTransition/index&& node scripts/start.js",
         "build": "node scripts/build.js"
     },
     "dependencies": {

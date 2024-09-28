@@ -1,15 +1,15 @@
-import { useSyncExternalStore } from "react";
-import { add, getSnapshot, subscribe } from "./01.01";
+import { useTodo } from "./02.01";
 import { __LOG__ } from "../../utils";
 
+// https://react.dev/reference/react/useSyncExternalStore#extracting-the-logic-to-a-custom-hook
 export default function () {
-    __LOG__({ message: "01() 被渲染了", color: "purple" });
+    __LOG__({ message: "02() 被渲染了", color: "purple" });
 
-    const todos = useSyncExternalStore(subscribe, getSnapshot);
+    const [todos, add] = useTodo();
 
     return (
         <fieldset style={{ borderColor: "red" }}>
-            <legend>01</legend>
+            <legend>02</legend>
 
             <div>
                 <button

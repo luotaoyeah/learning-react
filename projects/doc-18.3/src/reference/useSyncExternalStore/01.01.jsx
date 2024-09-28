@@ -23,8 +23,7 @@ export function add() {
  * @param listener
  */
 export function subscribe(listener) {
-    __LOG__({ message: "subscribe() 被调用了", color: "blue" });
-    console.log(listener, listener.name);
+    __LOG__({ message: "01() | subscribe() 被调用了", color: "blue" });
 
     listeners.push(listener);
 
@@ -38,7 +37,7 @@ export function subscribe(listener) {
  * getSnapshot() 函数是一个无参函数, 由 react 调用, 用来获取最新数据,
  */
 export function getSnapshot() {
-    __LOG__({ message: "getSnapshot() 被调用了", color: "red" });
+    __LOG__({ message: "01() | getSnapshot() 被调用了", color: "red" });
 
     return todos;
 }

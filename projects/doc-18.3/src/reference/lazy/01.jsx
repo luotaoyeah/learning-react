@@ -10,6 +10,7 @@ function A() {
 }
 
 // 使用 lazy() 延迟加载一个组件, 则当该组件第一次被渲染时才会被加载,
+// lazy() 的参数是一个函数, 该函数需要返回一个 Promise, 该 Promise 的 default 属性需要是组件函数,
 const B = lazy(() => {
     __LOG__({ message: "B() 被加载了", color: "blue" });
 

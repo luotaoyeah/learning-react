@@ -48,6 +48,10 @@ button {
     transition: border-color 0.25s;
 }
 
+button + button {
+    margin-left: 3px;
+}
+
 button:hover {
     border-color: #646cff;
 }

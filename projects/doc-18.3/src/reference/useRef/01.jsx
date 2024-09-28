@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { __LOG__ } from "../../utils";
 
 function A() {
@@ -7,7 +7,9 @@ function A() {
     const [count, setCount] = useState(0);
     const ref01 = useRef(0);
 
-    __LOG__({ message: ref01.current, color: "red" });
+    useEffect(() => {
+        __LOG__({ message: ref01.current, color: "red" });
+    });
 
     return (
         <fieldset style={{ borderColor: "blue" }}>

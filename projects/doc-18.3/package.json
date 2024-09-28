@@ -22,6 +22,7 @@
         "start:reference:useRef": "set ENTRY=reference/useRef/index&& node scripts/start.js",
         "start:reference:useTransition": "set ENTRY=reference/useTransition/index&& node scripts/start.js",
         "start:reference:useDeferredValue": "set ENTRY=reference/useDeferredValue/index&& node scripts/start.js",
+        "start:reference:useSyncExternalStore": "set ENTRY=reference/useSyncExternalStore/index&& node scripts/start.js",
         "start:reference:lazy": "set ENTRY=reference/lazy/index&& node scripts/start.js",
         "start:reference:memo": "set ENTRY=reference/memo/index&& node scripts/start.js",
         "build": "node scripts/build.js"

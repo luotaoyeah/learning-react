@@ -21,7 +21,7 @@
         "start:reference:useRef": "set VITE_ENTRY=reference/useRef/index.jsx&& vite",
         "start:reference:useTransition": "set VITE_ENTRY=reference/useTransition/index.jsx&& vite",
         "start:reference:useDeferredValue": "set VITE_ENTRY=reference/useDeferredValue/index.jsx&& vite",
-        "start:reference:useSyncExternalStore": "set VITE_ENTRY=reference/useSyncExternalStore/index.jsx&& vite",
+        "start:reference:useSyncExternalStore": "set VITE_ENTRY=reference/useSyncExternalStore/index.tsx&& vite",
         "start:reference:lazy": "set VITE_ENTRY=reference/lazy/index.jsx&& vite",
         "start:reference:memo": "set VITE_ENTRY=reference/memo/index.jsx&& vite",
         "build": "node scripts/build.js"

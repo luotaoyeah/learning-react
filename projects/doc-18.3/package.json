@@ -19,6 +19,7 @@
         "start:learn:manipulating-the-dom-with-refs": "set ENTRY=learn/manipulating-the-dom-with-refs/index&& node scripts/start.js",
         "start:learn:synchronizing-with-effects": "set ENTRY=learn/synchronizing-with-effects/index&& node scripts/start.js",
         "start:reference:Suspense": "set ENTRY=reference/Suspense/index&& node scripts/start.js",
+        "start:reference:useRef": "set ENTRY=reference/useRef/index&& node scripts/start.js",
         "start:reference:useTransition": "set ENTRY=reference/useTransition/index&& node scripts/start.js",
         "start:reference:useDeferredValue": "set ENTRY=reference/useDeferredValue/index&& node scripts/start.js",
         "start:reference:lazy": "set ENTRY=reference/lazy/index&& node scripts/start.js",

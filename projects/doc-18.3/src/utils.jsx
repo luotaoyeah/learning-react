@@ -4,7 +4,7 @@
  * @param message 日志消息.
  * @param color 颜色.
  */
-export function __LOG__({ message, color }) {
+export function __LOG__({ message, color = "black" }) {
     const now = new Date().toISOString().replace("T", " ").replace("Z", "");
     console.log(`%c${now} | ${message}`, `color:${color};`);
 }

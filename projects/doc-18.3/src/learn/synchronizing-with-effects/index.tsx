@@ -1,12 +1,13 @@
-import React, { StrictMode, useEffect, useRef, useState } from "react";
-import { createRoot } from "react-dom/client";
-import "../../index.css";
+import React, { StrictMode, useEffect, useRef, useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import '../../index.css';
+import C03 from './03.tsx';
 
 function A() {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
-        console.log("A | useEffect()");
+        console.log('A | useEffect()');
     });
 
     return (
@@ -29,19 +30,19 @@ function A() {
 
 function B() {
     const [isPlay, setIsPlay] = useState(false);
-    const [text, setText] = useState("");
-    const videoRef = useRef(null);
+    const [text, setText] = useState('');
+    const videoRef = useRef<HTMLVideoElement | null>(null);
 
     // 当没有指定 dependencies 时, 每次 render 之后都会执行,
     // 当 dependencies 为 [] 时, 只会在首次 mount 之后执行一次,
     // 当 dependencies 不为空时, 当里面任意一个 dependency 发生变更时, 才会执行,
     //   通过 Object.is() 来判断是否发生了变更,
     useEffect(() => {
-        console.log("B | useEffect()");
+        console.log('B | useEffect()');
         if (isPlay) {
-            videoRef.current.play();
+            videoRef.current?.play();
         } else {
-            videoRef.current.pause();
+            videoRef.current?.pause();
         }
     }, [isPlay]);
 
@@ -58,7 +59,7 @@ function B() {
                         setIsPlay(!isPlay);
                     }}
                 >
-                    {isPlay ? "PAUSE" : "PLAY"}
+                    {isPlay ? 'PAUSE' : 'PLAY'}
                 </button>
             </div>
 
@@ -69,34 +70,11 @@ function B() {
     );
 }
 
-function C() {
-    // 在开发环境, 组件会 mount 两次,
-    console.log("C()");
-
-    useEffect(() => {
-        console.log("C | useEffect()");
-
-        // useEffect() 中返回一个函数, 这个函数称为 destructor,
-        // destructor 的返回值必须为 void,
-        // destructor 会在下次执行 effect 之前执行, 并且会在组件 unmount 时执行一次,
-        return () => {
-            console.log("C | useEffect() | destroy");
-        };
-    }, []);
-
-    return (
-        <fieldset>
-            <legend>C</legend>
-
-            <div></div>
-        </fieldset>
-    );
-}
-
-createRoot(document.getElementById("root")).render(
+// https://react.dev/learn/synchronizing-with-effects
+createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <A />
         <B />
-        <C />
+        <C03 />
     </StrictMode>,
 );

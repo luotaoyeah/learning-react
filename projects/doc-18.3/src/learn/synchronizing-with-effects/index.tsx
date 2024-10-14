@@ -1,18 +1,19 @@
 import React, { StrictMode, useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import '../../index.css';
-import C03 from './03.tsx';
+import { C03 } from './03.tsx';
+import { C04 } from './04.tsx';
 
-function A() {
+function C01() {
     const [count, setCount] = useState(0);
 
     useEffect(() => {
-        console.log('A | useEffect()');
+        console.log('C01 | useEffect()');
     });
 
     return (
         <fieldset>
-            <legend>A</legend>
+            <legend>C01</legend>
 
             <div>{count}</div>
             <div>
@@ -28,7 +29,7 @@ function A() {
     );
 }
 
-function B() {
+function C02() {
     const [isPlay, setIsPlay] = useState(false);
     const [text, setText] = useState('');
     const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -38,7 +39,7 @@ function B() {
     // 当 dependencies 不为空时, 当里面任意一个 dependency 发生变更时, 才会执行,
     //   通过 Object.is() 来判断是否发生了变更,
     useEffect(() => {
-        console.log('B | useEffect()');
+        console.log('C02 | useEffect()');
         if (isPlay) {
             videoRef.current?.play();
         } else {
@@ -48,7 +49,7 @@ function B() {
 
     return (
         <fieldset>
-            <legend>B</legend>
+            <legend>C02</legend>
 
             <div>
                 <video autoPlay={false} ref={videoRef} src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"></video>
@@ -73,8 +74,9 @@ function B() {
 // https://react.dev/learn/synchronizing-with-effects
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <A />
-        <B />
+        <C01 />
+        <C02 />
         <C03 />
+        <C04 />
     </StrictMode>,
 );

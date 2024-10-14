@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { __LOG__ } from '../../utils.tsx';
 
 // https://react.dev/learn/synchronizing-with-effects#step-3-add-cleanup-if-needed
-export default function () {
+export function C03() {
     // 在开发环境, 组件会 mount 两次,
     __LOG__({ message: 'C03 | render', color: 'red' });
 
@@ -21,7 +21,7 @@ export default function () {
 
     return (
         <fieldset>
-            <legend>C</legend>
+            <legend>C03</legend>
 
             <div>
                 <button

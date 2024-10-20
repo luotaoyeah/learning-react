@@ -5,7 +5,7 @@
     "scripts": {
         "start": "npm run use-node && set VITE_ENTRY=index.jsx&& vite",
         "build": "npm run use-node && vite build",
-        "use-node": "nvm use 20.17.0 && corepack enable && corepack prepare pnpm@9.11.0 --activate && corepack use pnpm@9.11.0",
+        "use-node": "nvm use 20.17.0 && corepack enable && corepack use pnpm@9.12.1",
         "start:learn:learn": "npm run use-node && set VITE_ENTRY=learn/learn/index.jsx&& vite",
         "start:learn:your-first-component": "npm run use-node && set VITE_ENTRY=learn/your-first-component/index.jsx&& vite",
         "start:learn:writing-markup-with-jsx": "npm run use-node && set VITE_ENTRY=learn/writing-markup-with-jsx/index.jsx&& vite",

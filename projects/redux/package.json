@@ -8,7 +8,8 @@
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "use-node": "nvm use 20.17.0 && corepack enable && corepack use pnpm@9.12.1",
-        "start:index": "npm run use-node && set VITE_ENTRY=index.tsx&& vite"
+        "start:index": "npm run use-node && set VITE_ENTRY=index.tsx&& vite",
+        "start:introduction/getting-started": "npm run use-node && set VITE_ENTRY=src/introduction/getting-started/index.tsx&& vite"
     },
     "dependencies": {
         "react": "18.3.1",
@@ -16,6 +17,7 @@
     },
     "devDependencies": {
         "@eslint/js": "9.13.0",
+        "@reduxjs/toolkit": "2.3.0",
         "@types/react": "18.3.11",
         "@types/react-dom": "18.3.1",
         "@vitejs/plugin-react": "4.3.3",
